@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile"></div>
+</body>
+<script>
+    const Requesturl='https://api.github.com/users/hiteshchoudhary'
+
+    const xml=new XMLHttpRequest();
+    xml.open('GET', Requesturl);
+    xml.onreadystatechange=function(){
+        if(xml.readyState==4){
+           const data= JSON.parse(this.responseText);
+
+           const container=document.querySelector(".profile");
+           const image= document.createElement("img");
+           const follower = document.createElement("p");
+
+           image.src=data.avatar_url;
+           image.width=200;
+           image.style.borderRadius="90%";
+           follower.textContent=`Followers: ${data.followers}`;
+
+           container.appendChild(image);
+           container.appendChild(follower);    
+        }
+    }
+    xml.send();
+</script>
+</html>
