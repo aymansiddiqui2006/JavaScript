@@ -29,8 +29,9 @@
             cursor: pointer;
             text-align: center;
         }
-        .box:active{
-           transform: scale(0.8);
+
+        .box:active {
+            transform: scale(0.8);
         }
     </style>
 </head>
@@ -43,7 +44,24 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function generate() {
+            let letter = "0123456789ABCDEF";
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letter[(Math.floor(Math.random() * 16))]
+
+            }
+            return color
+        }
+
+        document.querySelectorAll(".box").forEach((box) => {
+            box.addEventListener('click', () => {
+                box.style.backgroundColor = generate()
+                box.innerHTML = generate()
+            })
+        })
+    </script>
 </body>
 
 </html>
