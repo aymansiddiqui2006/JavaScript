@@ -56,10 +56,14 @@
         }
 
         document.querySelectorAll(".box").forEach((box) => {
-            box.addEventListener('click', () => {
+            setInterval(() => {
                 box.style.backgroundColor = generate()
                 box.innerHTML = generate()
-            })
+            }, 500)
+            // box.addEventListener('click', () => {
+            //     box.style.backgroundColor = generate()
+            //     box.innerHTML = generate()
+            // })
         })
     </script>
 </body>
