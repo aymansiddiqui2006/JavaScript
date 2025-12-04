@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(21, 21, 21);">
+    <ul class="language" style="color: aliceblue;">
+    </ul>
+</body>
+<script>
+    function add(name){
+        const li= document.createElement('li');
+        li.innerHTML=`${name}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+    add("mumbai")
+    add("delhi")
+    add("goa")
+    add("bihar")
+
+    //replace
+    const lang=document.querySelector("li:nth-child(4)")
+    const word=document.createElement('li')
+    word.textContent="patna"
+    lang.replaceWith(word)
+
+    //edit
+    const edit=document.querySelector("li:first-child")
+    edit.outerHTML='<li>banaras</li>'
+
+    //remove
+    const rem=document.querySelector("li:last-child")
+    rem.remove()
+
+</script>
+</html>

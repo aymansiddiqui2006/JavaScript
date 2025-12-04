@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <span class="span">hello</span>
+    </div>
+
+    <script>
+        //attribute are the things that we write in the <>bracket like class , id , type and etc...
+        document.querySelector('.span').hasAttribute("class");//to check weither the span name attribute name as class and etc
+        document.querySelector('.span').hasAttribute("color");
+        document.querySelector('.span').getAttribute("class");
+        document.querySelector('.span').setAttribute('id','js_span');
+        document.querySelector('.span').setAttribute('style','color:red;font-weight: bolder; font-size: larger;');
+        document.querySelector('.span').removeAttribute('id')
+
+    </script>
+</body>
+
+</html>

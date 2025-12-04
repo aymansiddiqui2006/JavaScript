@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body style="background-color: rgb(35, 35, 35);">
+    
+</body>
+<script>
+ const div=document.createElement('div')
+//  console.log(div)
+ div.className="main"
+ div.id="styling"
+ div.style.backgroundColor="orange"
+ div.style.color="white"
+ div.style.border="white"
+ div.style.height="50px"
+ div.style.fontSize="45px"
+ const text=document.createTextNode('hello kaise ho')
+ div.appendChild(text)
+ document.body.appendChild(div)
+
+</script>
+</html>
