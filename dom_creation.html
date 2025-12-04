@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(79, 79, 79);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const div_con=document.createElement('div');
+        div_con.className="container"
+        div_con.style.height="100px"
+        div_con.style.padding="10px"
+        
+        div_con.style.margin="10px"
+        div_con.style.backgroundColor="pink"
+
+        const span_con=document.createElement('span')
+        span_con.className="span"
+        span_con.innerHTML="hello world"
+
+        div_con.append(span_con)
+        document.body.append(div_con)
+    </script>
+</body>
+</html>
