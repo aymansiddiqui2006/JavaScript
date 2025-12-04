@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
-    </style>
-</head>
-<body>
-    <script>
-        document.body.setAttribute('style',' background-color: rgb(62, 62, 62);')
-        const div_con=document.createElement('div');
-        div_con.className="container"
-        div_con.style.height="100px"
-        div_con.style.padding="10px"
-        div_con.style.margin="10px"
-        div_con.style.backgroundColor="pink"
 
-        const span_con=document.createElement('span')
-        span_con.className="span"
-        span_con.innerHTML="hello world"
+</head>
+
+<body>
+    <div>
+        <button class="box"> click</button>
+    </div>
+
+    <script>
+        document.body.setAttribute('style', ' background-color: rgb(62, 62, 62);')
+        const div_con = document.createElement('div');
+        div_con.className = "container"
+        div_con.style.height = "100px"
+        div_con.style.padding = "10px"
+        div_con.style.margin = "10px"
+        div_con.style.backgroundColor = "pink"
+
+        const span_con = document.createElement('span')
+        span_con.className = "span"
+        span_con.innerHTML = "hello world"
 
         div_con.append(span_con)
-        document.body.append(div_con)
+        document.body.prepend(div_con)
+
+        const button = document.querySelector(".box")
+        button.onclick = ()=>{
+            alert("clicked on button")
+        };
     </script>
 </body>
+
 </html>
